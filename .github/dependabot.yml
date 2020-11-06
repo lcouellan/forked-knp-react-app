@@ -3,22 +3,18 @@ updates:
   - package-ecosystem: npm
     directory: .
     labels:
-      - Dependencies
-      - Javascript
+      - dependencies
+      - javascript
       - 'ready to merge'
     schedule:
       interval: daily
       time: '12:00'
     open-pull-requests-limit: 99
-    automerged_updates:
-      - match:
-        dependency_type: "all"
-        update_type: "semver:patch"
   - package-ecosystem: docker
     directory: .
     labels:
-      - Dependencies
-      - Docker
+      - dependencies
+      - docker
       - 'ready to merge'
     schedule:
       interval: daily
