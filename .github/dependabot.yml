@@ -1,0 +1,30 @@
+version: 2
+updates:
+  - package-ecosystem: npm
+    directory: .
+    labels:
+      - Dependencies
+      - Javascript
+      - 'ready to merge'
+    schedule:
+      interval: daily
+      time: '00:00'
+    open-pull-requests-limit: 99
+    automerged_updates:
+      - match:
+        dependency_type: "all"
+        update_type: "semver:patch"
+  - package-ecosystem: docker
+    directory: .
+    labels:
+      - Dependencies
+      - Docker
+      - 'ready to merge'
+    schedule:
+      interval: daily
+      time: '00:00'
+    ignore:
+      - dependency-name: "node"
+        versions: ["13.x", "14.x"]
+      - dependency-name: "node"
+        versions: ["1.19.x"]
