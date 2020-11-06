@@ -6,6 +6,9 @@ updates:
       - Dependencies
       - Javascript
       - 'ready to merge'
+    schedule:
+      interval: daily
+      time: '12:00'
     open-pull-requests-limit: 99
     automerged_updates:
       - match:
@@ -19,7 +22,7 @@ updates:
       - 'ready to merge'
     schedule:
       interval: daily
-      time: '00:00'
+      time: '12:00'
     ignore:
       - dependency-name: "node"
         versions: ["13.x", "14.x"]
